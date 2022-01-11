@@ -2,6 +2,8 @@ composer.phar
 /vendor/
 /node_modules/
 /excel/*.xlsx
+/excel/*.csv
+/excel/*.Identifier
 email.md
 smtp_settings.php
 

@@ -12,7 +12,7 @@ if (!file_exists(__DIR__ . '/email.md'))
   die("Please copy email.dist.md into email.md and adjust as necessary.");
 }
 
-$excelFiles = glob(__DIR__ . '/excel/*.xlsx');
+$excelFiles = glob(__DIR__ . '/excel/*.csv');
 
 if (empty($excelFiles)) {
   die("Please copy the Excel file with all emails in the excel folder.");
@@ -34,12 +34,18 @@ if (!empty($_POST['email'])) {
                  with your full name and we'll try to sort it out!";
 
   foreach ($excelFiles as $excelFilename) {
-    $reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader('Xlsx');
-    $reader->setReadDataOnly(true);
+    // $reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader('Xlsx');
+    // $reader->setReadDataOnly(true);
+    $reader = new \PhpOffice\PhpSpreadsheet\Reader\Csv();
+
+    $reader->setInputEncoding('UTF-8');
+    $reader->setDelimiter(',');
+    $reader->setEnclosure('');
+    $reader->setSheetIndex(0);
 
     $spreadsheet = $reader->load($excelFilename);
-
-    $worksheet = $spreadsheet->getSheetByName('CSV Pour export');
+    $worksheet = $spreadsheet->getActiveSheet();
+  //  $worksheet = $spreadsheet->getSheetByName('CSV Pour export');
 
     $res = array();
 
@@ -61,14 +67,13 @@ if (!empty($_POST['email'])) {
     }
 
     if (!empty($foundRows))
-      $bEmailSent = sendEmail($foundRows);
+       $bEmailSent = sendEmail($foundRows);
   }
 }
 
 
 function sendEmail($rows)
 {
-
   $parser = new \cebe\markdown\GithubMarkdown();
   $parser->html5 = true;
   $markdown = file_get_contents(__DIR__ . '/email.md');
@@ -84,8 +89,11 @@ function sendEmail($rows)
   $recipients = array();
 
   foreach ($rows as $row) {
-    $recipients[$row['recoveryEmail']] = $row['recoveryEmail'];
-    $recipients[$row['homeSecondaryEmail']] = $row['homeSecondaryEmail'];
+    if (!empty($row['recoveryEmail']))
+      $recipients[$row['recoveryEmail']] = $row['recoveryEmail'];
+
+    if (!empty($row['homeSecondaryEmail']))
+      $recipients[$row['homeSecondaryEmail']] = $row['homeSecondaryEmail'];
   }
 
   //Recipients

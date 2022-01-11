@@ -1,6 +1,6 @@
-Please upload your Excel files here.
+Please upload your CSV file here. The CSV must be an export of the sheet "CSV Pour export" directly from Google Spreadsheet (UTF-8, comma "," separated).
 
-Make sure a work sheet named "CSV Pour export" exists, with the following columns (only the order matters):
+Make sure it has the following columns (only the order matters):
 
 * First Name
 * Last Name
@@ -13,4 +13,5 @@ Make sure a work sheet named "CSV Pour export" exists, with the following column
 * Home Secondary Email
 * Work Secondary Email
 
-The name of the Excel file does not matter, as long as it ends with `.xlsx`
+The name of the CSV file does not matter, as long as it ends with `.csv`.
+

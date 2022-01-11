@@ -37,8 +37,8 @@ De plus, il y a la possibilité de mettre en place un renvoi vers une ou plusieu
 
 Première connexion :
 * Adresse de connexion : https://mail.google.com/
-* Email (identifiant) : student.1004@aseica.org
-* Mot de passe : `Z5DVtcKT` (devra être changé à la première connexion)
+* Email (identifiant) : EMAIL
+* Mot de passe : `PASSWORD` (devra être changé à la première connexion)
 
 **Perte de mot de passe :** si votre enfant perd son mot de passe, vous pouvez le réinitialiser grâce à la procédure de récupération du mot de passe, en utilisant l’adresse email du représentant légal. Nous vous invitons à associer un numéro de téléphone de secours pour plus de sécurité.
 

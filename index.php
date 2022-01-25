@@ -142,16 +142,52 @@ function sendEmail($rows)
 
   <div class="container">
     <div class="row align-items-start">
-      <div class="col-lg-5 mx-auto">
-        <h1>Aseica account retrieval</h1>
+      <div class="col-lg-10 mx-auto">
+        <div class="text-center">
+          <img class="my-5" src="images/image1.png">
+          <h1 class="mb-5" >Aseica account retrieval</h1>
+        </div>
 
-        <form method="POST" class="mb-3">
+    <p>Welcome to the Aseica Google account page. Here, you&#39;ll be able to retrieve your
+            Google Account for all class activities (Google Classroom, Google Meet, Google docs, etc.).</p>
+    <p></p>
+    <p></p>
+    <p>The first step is to get your student email address and your initial password. Once
+            you have it, you will be immediately prompted to change your password. Once your password has been changed,
+            and you forget it, you can retrieve it easily by checking the procedure below.</p>
+    <p></p>
+    <p></p>
+    <p>If you tried the steps in the tutorial and are still encountering difficulties, or
+            if you have not received the message about the account, please contact <a href="mailto:google_help@aseica.org">google_help@aseica.org</a>.</p>
+    <p></p>
+    <p></p>
+    <p>Table of contents</p>
+    <ul>
+        <li><a href="#retrieve">Getting your student email address</li>
+        <li><a href="#login">Login in for the first time</a></li>
+        <li><a href="#waystoemail">Ways to check your email</a></li>
+        <li><a href="#redirect">Creating a redirect</a></li>
+        <li><a href="#lostpassword">Retrieving your lost password</a></li>
+    </ul>
+    <p></p>
+    <p></p>
+    <hr>
+    <p></p>
+    <p></p>
+
+
+    <h2 id="retrieve">Getting your student email address</h2>
+    <p>In order to get your student email address, please enter below the address of one of
+            the parent, as given to the Aseica during registration:</p>
+    <p></p>
+
+    <form method="POST" class="mb-3">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Parental email address:</label>
             <input name="email" type="email" class="form-control"  placeholder="parent.email@example.com" id="exampleInputEmail1" aria-describedby="emailHelp">
             <div id="emailHelp" class="form-text">Please enter the email address of one of the parent, as given to the Aseica during registration.</div>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary">Send my email address to my parents now !</button>
         </form>
 
 
@@ -172,9 +208,113 @@ if ($bEmailSent !== false)
 
 }
 ?>
+    <p></p>
+    <p>After clicking the button, you will receive an email at this address with
+            instructions to log in for all Aseica registered kids in the family.</p>
+
+
+    <h2 id="login">Login in for the first time</h2>
+    <p><b>Step 1:</b> go to <a href="https://mail.google.com" target="_blank">https://mail.google.com</a></p>
+    <p></p>
+    <p>Do you see a window like the screenshot below?</p>
+    <p></p>
+    <p><img src="images/image6.png" style="max-width:100%"></p>
+    <p></p>
+    <ul>
+        <li>NO &rarr; go to step 2</li>
+        <li>YES &rarr; go to step 3 (skipping step 2)</li>
+    </ul>
+    <p></p>
+    <p><b>Step 2:</b> Add another Google account</p>
+    <p>(not needed unless you get a screen like below)</p>
+    <p></p>
+    <p>You&rsquo;re getting this if you are already logged in to one or more Google/Gmail accounts on the browser. You need to add the ASEICA account, so that you can switch easily between all Gmail-based accounts.</p>
+    <p></p>
+    <p>1/ Click on your profile picture/logo at the top right of the screen</p>
+    <p><img src="images/image13.png" style="max-width:100%"></p>
+    <p></p>
+    <p></p>
+    <p>2/ In the window that appears, select &ldquo;Add another account&rdquo;</p>
+    <p><img src="images/image3.png" style="max-width:100%"></p>
+    <p></p>
+    <p></p>
+    <p><b>Step 3:</b> enter login (student.XYZ@aseica.org) and &ldquo;Next&rdquo; </p>
+    <p></p>
+    <p>Follow the flow of the following pages (password, accept terms, change password, etc). You&rsquo;re done!</p>
+    <p></p>
+    <p>If you get screens not mentioned in this tutorial, please email a screenshot to google_help@aseica.org, with explanations of the steps you took. Thanks!</p>
+    <h2 id="waystoemail">Ways to check your email</h2>
+    <h4>Go to <a href="https://mail.google.com" target="_blank">mail.google.com</a></h4>
+    <p>The simplest way to consult this email is to go to mail.google.com</p>
+    <p></p>
+    <h4>Forward to an existing address</h4>
+    <p>You can forward all email to an existing address. See <a href="#redirect">further</a>.</p>
+    <p></p>
+    <h4>Use Outlook or an email client</h4>
+    <p>You can use <a href="https://support.google.com/mail/answer/7104828?hl=en-GB&visit_id=637786964639990659-662828657&rd=1" target="_blank">imap or pop</a> to download this email to any email client such as Outlook.</p>
+    <p></p>
+    <h4>Add this account to a smartphone</h4>
+    <p>You can add the aseica email address to a smartphone.</p>
+
+
+
+    <h2 id="redirect">Creating a redirect</h2>
+    <p>You can decide to forward your email to an existing account your child already checks regularly.</p>
+    <p></p>
+    <p><b>Step 1:</b> go to your Aseica email settings</p>
+    <p>1/ Click on the cog icon</p>
+    <p><img src="images/image4.png" style="max-width:100%"></p>
+    <p>2/ Click on &ldquo;See all settings&rdquo;</p>
+    <p><img src="images/image7.png" style="max-width:100%"></p>
+    <p></p>
+    <p><b>Step 2:</b> Select the &ldquo;Forwarding and
+            POP/IMAP&rdquo; tab</p>
+    <p>1/ Click on &ldquo;Forwarding and POP/IMAP&rdquo;</p>
+    <p></p>
+    <p>2/ Click on &ldquo;Add a forwarding address&rdquo;</p>
+    <p><img src="images/image8.png" style="max-width:100%"></p>
+    <p></p>
+    <p></p>
+    <p><b>Step 3:</b> Enter your child&rsquo;s personal email address</p>
+    <p></p>
+    <p>1/ Enter your email and click &ldquo;Next&rdquo;</p>
+    <p><img src="images/image12.png" style="max-width:100%"></p>
+    <p>2/ Click on &ldquo;Proceed&rdquo; on the prompt</p>
+    <p><img src="images/image2.png" style="max-width:100%"></p>
+    <p></p>
+    <p></p>
+    <p><b>Step 4:</b> Enter your confirmation code</p>
+    <p>Check your email on your personal address, and enter the code, or click on the link
+            in the email :</p>
+    <p><img src="images/image10.png" style="max-width:100%"></p>
+    <p><img src="images/image5.png" style="max-width:100%"></p>
+    <p></p>
+    <p><b>Step 5:</b> Enable the forwarding, and save your changes!</p>
+    <p>1/ Select &ldquo;Forward &hellip;.&rdquo;</p>
+    <p></p>
+    <p>2/ Click on &ldquo;Save changes&rdquo;  !</p>
+    <p><img src="images/image11.png" style="max-width:100%"></p>
+
+
+
+    <h2 id="lostpassword">Retrieving your lost password</h2>
+    <p>If you have lost your password, you can <a href="https://support.google.com/accounts/answer/7682439" target="_blank">reset
+       it through the password recovery procedure</a>, using the parent&rsquo;s email
+       address. We invite you to link an emergency telephone number for more security.</p>
+    <p></p>
+    <p>NB: If you don&rsquo;t remember your email address, you can get it back using step 1
+            at the top of this document (the original password will not work anymore however, once it has been changed,
+            so you still need to get a new password using the password recovery procedure).</p>
+    <p></p>
+    <p></p>
+
       </div>
     </div>
   </div>
+
+
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

@@ -84,13 +84,14 @@ function sendEmail($rows)
   $GLOBALS['mail']->setFrom('google_help@aseica.org', 'Aseica Google Help');
   $GLOBALS['mail']->Priority = 3;
 
-  if (file_exists(__DIR__ . 'dkim.private'))
+  if (file_exists(__DIR__ . '/dkim.private'))
   {
     $GLOBALS['mail']->DKIM_domain = 'aseica.org';
-    $GLOBALS['mail']->DKIM_private = __DIR__ . 'dkim.private';
-    $GLOBALS['mail']->DKIM_selector = 'google';
+    $GLOBALS['mail']->DKIM_private = __DIR__ . '/dkim.private';
+    $GLOBALS['mail']->DKIM_selector = 'kundenserver';
     $GLOBALS['mail']->DKIM_passphrase = '';
     $GLOBALS['mail']->DKIM_identity = 'google_help@aseica.org';
+    $GLOBALS['mail']->Encoding = "base64";
   }
 
   if (file_exists(__DIR__ . 'smtp_settings.php'))

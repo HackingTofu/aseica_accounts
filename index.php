@@ -82,6 +82,16 @@ function sendEmail($rows)
   $GLOBALS['mail'] = new PHPMailer(true);
   $GLOBALS['mail']->CharSet = "UTF-8";
   $GLOBALS['mail']->setFrom('google_help@aseica.org', 'Aseica Google Help');
+  $GLOBALS['mail']->Priority = 3;
+
+  if (file_exists(__DIR__ . 'dkim.private'))
+  {
+    $GLOBALS['mail']->DKIM_domain = 'aseica.org';
+    $GLOBALS['mail']->DKIM_private = __DIR__ . 'dkim.private';
+    $GLOBALS['mail']->DKIM_selector = 'google';
+    $GLOBALS['mail']->DKIM_passphrase = '';
+    $GLOBALS['mail']->DKIM_identity = 'google_help@aseica.org';
+  }
 
   if (file_exists(__DIR__ . 'smtp_settings.php'))
     include_once(__DIR__ . 'smtp_settings.php');
